@@ -137,10 +137,9 @@ const ian = {
         if (!imgTag) {
             return;
         }
-        imgTag.error(event => {
+        imgTag.onerror = (event) => {
                 let src = imgTag.originalSrc || imgTag.src;
                 if (imgTag.complete && imgTag.naturalHeight !== 0 && src && src.length && src.substring(0, 1) == "/") {
-                    debugger;
                     for (let ep of ian.endpoints) {
                         if (ian.isWorking(ep.endpoint)) {
                             imgTag.src = ep.endpoint + src;
@@ -149,7 +148,7 @@ const ian = {
                     }
                     imgTag.originalSrc = src;
                 }
-            });
+            };
     }
 };
 
