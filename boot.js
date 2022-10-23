@@ -142,12 +142,12 @@ const ian = {
                 if (src.startsWith(document.location.origin)) {
                     src = src.substring(document.location.origin.length);
                 }
-                if (imgTag.complete && imgTag.naturalHeight !== 0 && src && src.length && src.substring(0, 1) == "/") {
+                if (imgTag.complete && imgTag.naturalHeight == 0 && src && src.length && src.substring(0, 1) == "/") {
                     for (let ep of ian.endpoints) {
                         if (ian.isWorking(ep.endpoint)) {
                             imgTag.src = ep.endpoint + src;
                             break;
-                       }
+                        }
                     }
                     imgTag.originalSrc = src;
                 }
