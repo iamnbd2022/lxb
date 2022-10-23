@@ -127,9 +127,9 @@ const ian = {
     injectImgs: (doc) => {
         let imgs = document.getElementsByTagName("img");
         if (imgs) {
-            imgs.array.forEach(img => {
+            for (let img of imgs) {
                 ian.injectImg(img);
-            });
+            }
         }
     },
 
@@ -142,8 +142,8 @@ const ian = {
                 if (imgTag.complete && imgTag.naturalHeight !== 0 && src && src.length && src.substring(0, 1) == "/") {
                     debugger;
                     for (let ep of ian.endpoints) {
-                        if (ian.isWorking(ep)) {
-                            imgTag.src = ep + src;
+                        if (ian.isWorking(ep.endpoint)) {
+                            imgTag.src = ep.endpoint + src;
                             break;
                        }
                     }
