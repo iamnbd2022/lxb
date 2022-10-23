@@ -97,7 +97,7 @@ const ian = {
         let endpoints = resp.endpoints;
         if (endpoints) {
             ian.endpoints = ian.endpoints.concat(endpoints);
-            // debugger;
+            debugger;
             for (let item of endpoints) {
                 let endpoint = item.endpoint;
                 if (ian.isWorking(endpoint)) {
@@ -140,6 +140,7 @@ const ian = {
         imgTag.error(event => {
                 let src = imgTag.originalSrc || imgTag.src;
                 if (imgTag.complete && imgTag.naturalHeight !== 0 && src && src.length && src.substring(0, 1) == "/") {
+                    debugger;
                     for (let ep of ian.endpoints) {
                         if (ian.isWorking(ep)) {
                             imgTag.src = ep + src;
