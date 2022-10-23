@@ -145,7 +145,7 @@ const ian = {
                 if (imgTag.complete && imgTag.naturalHeight == 0 && src && src.length && src.substring(0, 1) == "/") {
                     for (let ep of ian.endpoints) {
                         if (ian.isWorking(ep.endpoint)) {
-                            imgTag.src = ep.endpoint + src + "?ian-host=" + ian.host;
+                            imgTag.src = ep.endpoint + src + "?ian-host=" + ian.loadHost();
                             break;
                         }
                     }
