@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
         <meta host="lxb.ian">
 		<title>LXB</title>
-                <javascript>{{boot.js}}</javascript>
+                <script>{{boot.js}}</script>
 	</head>
 	<body class="" id="content">
 
