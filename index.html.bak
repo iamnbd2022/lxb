@@ -5,7 +5,6 @@
         <meta host="lxb.ian">
 		<title>LXB</title>
 		<script>{{boot.js}}</script>
-		<script src="boot.js"></script>
 	</head>
 	<body class="" id="content">
 
